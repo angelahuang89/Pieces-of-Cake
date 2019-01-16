@@ -23,6 +23,24 @@ const mergeRanges = meetings => {
   return result;
 }
 
+// const mergeRanges = meetings => {
+//   const result = [];
+//   const sorted = meetings.sort((a, b) => a.startTime - b.startTime);
+//   let curr = sorted[0];
+//   for (let i = 1; i < sorted.length; i++) {
+//     const start = sorted[i].startTime;
+//     const end = sorted[i].endTime;
+//     if (start >= curr.startTime && start <= curr.endTime) {
+//       curr.endTime = Math.max(curr.endTime, end);
+//     } else {
+//       result.push(curr);
+//       curr = sorted[i];
+//     }
+//   }
+//   result.push(curr);
+//   return result;
+// }
+
 const testInput = [
   { startTime: 0,  endTime: 1 },
   { startTime: 3,  endTime: 5 },
